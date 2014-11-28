@@ -210,7 +210,7 @@ questionbank.questions = [
         optd: "Option 10D",
         optdcorrect: "true",
         optdpoints: "113"
-    },
+    }
 
 ]
 

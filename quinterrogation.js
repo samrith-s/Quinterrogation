@@ -17,7 +17,7 @@ var flag;
 $(function() {
     initGame();
     playGame();
-    scrollObserver();
+    observers();
 });
 
 function initGame() {
@@ -65,10 +65,6 @@ function playGame() {
         $(".option-block").hide();
         optionScroller(0);
     }).fadeIn();
-
-    $(question).unbind().on('answered', function (e, data) {
-        processAnswer(data);
-    });
 }
 
 function getQuestion() {
@@ -122,13 +118,20 @@ function defeat() {
 }
 
 
-function scrollObserver() {
-    $("#leftOpt").unbind().on('click', function() {
+function observers() {
+    $("#leftOpt").unbind('click').on('click', function() {
         changeOption($(".option-show").attr("id"), "left");
     });
     
-    $("#rightOpt").unbind().on('click', function() {
+    $("#rightOpt").unbind('click').on('click', function() {
         changeOption($(".option-show").attr("id"), "right");
+    });
+
+    $("#qt-say-button").unbind('click').on('click', function() {
+        $(".option-show").first().trigger('click');
+        $(question).unbind('answered').on('answered', function (e, data) {
+            processAnswer(data);
+        });
     });
 }
 

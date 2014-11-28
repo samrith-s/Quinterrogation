@@ -13,6 +13,9 @@ config.quiz = {
                 "<div id='rightOpt'>" +
                     "<img src='img/arrow-right.png' />" +
                 "</div>" +
+                "<span id='qt-say-button'>" +
+                    "Say this!" +
+                "</span>" +
             "</div>"
         }
     ]

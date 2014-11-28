@@ -14,7 +14,7 @@
     /*background-repeat: no-repeat;*/
 
     background: rgba(250, 250, 250, 0.8);
-    border-radius: 10px;
+    border-radius: 5px;
     left:30%;
     top:5%;
     width: 62%;
@@ -29,13 +29,12 @@
     /*background-repeat: no-repeat;*/
 
     background: rgba(250, 250, 250, 0.8);
-    border-radius: 10px;
+    border-radius: 5px;
 
     left: 2%;
     top: 52%;
     width: 70%;
-    height: auto !important;
-    position: fixed;
+    position: absolute;
     padding: 2%;
 }
 

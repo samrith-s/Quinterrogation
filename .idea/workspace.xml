@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="quinterrogation-data.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="quinterrogation-data.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quinterrogation-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="20" selection-start="631" selection-end="631" vertical-scroll-proportion="0.44058746" vertical-offset="0" max-vertical-offset="765">
+            <state line="11" column="21" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -44,16 +44,16 @@
       <file leaf-file-name="quiz.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/quiz/quiz.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="24" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1575">
+            <state line="31" column="23" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quinterrogation.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quinterrogation.html">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="16" selection-start="375" selection-end="375" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="525">
+            <state line="2" column="6" selection-start="39" selection-end="39" vertical-scroll-proportion="0.04137931" vertical-offset="0" max-vertical-offset="725">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="quiz.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/quiz/quiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="29" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1650">
+            <state line="82" column="2" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1650">
               <folding />
             </state>
           </provider>
@@ -80,7 +80,7 @@
       <file leaf-file-name="quinterrogation.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quinterrogation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="46" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="2535">
+            <state line="136" column="23" selection-start="3253" selection-end="3253" vertical-scroll-proportion="0.0" vertical-offset="1621" max-vertical-offset="2535">
               <folding />
             </state>
           </provider>
@@ -98,18 +98,18 @@
       <list>
         <option value="$PROJECT_DIR$/quinterrogation.html" />
         <option value="$PROJECT_DIR$/modules/quiz/quiz.js" />
-        <option value="$PROJECT_DIR$/modules/quiz/quiz.css" />
         <option value="$PROJECT_DIR$/quinterrogation-config.js" />
         <option value="$PROJECT_DIR$/quinterrogation.css" />
-        <option value="$PROJECT_DIR$/quinterrogation.js" />
         <option value="$PROJECT_DIR$/quinterrogation-data.js" />
         <option value="$PROJECT_DIR$/modules/quiz/question-bank.js" />
+        <option value="$PROJECT_DIR$/modules/quiz/quiz.css" />
+        <option value="$PROJECT_DIR$/quinterrogation.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="-904" />
+    <option name="y" value="-4" />
     <option name="width" value="1602" />
     <option name="height" value="905" />
   </component>
@@ -281,15 +281,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-904" width="1602" height="905" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="-4" width="1602" height="905" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25353926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25353926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -337,13 +337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quinterrogation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="46" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="2535">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/player.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -361,16 +354,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/quiz/quiz.css">
+    <entry file="file://$PROJECT_DIR$/quinterrogation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1575">
+        <state line="52" column="15" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2145">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quinterrogation.html">
+    <entry file="file://$PROJECT_DIR$/quinterrogation-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="375" selection-end="375" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="525">
+        <state line="11" column="21" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/quiz/quiz.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="23" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1560">
           <folding />
         </state>
       </provider>
@@ -382,23 +382,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quinterrogation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="15" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/quiz/quiz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="29" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1650">
+        <state line="82" column="2" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1650">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quinterrogation-data.js">
+    <entry file="file://$PROJECT_DIR$/quinterrogation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="631" selection-end="631" vertical-scroll-proportion="0.44058746" vertical-offset="0" max-vertical-offset="765">
+        <state line="136" column="23" selection-start="3253" selection-end="3253" vertical-scroll-proportion="0.0" vertical-offset="1621" max-vertical-offset="2535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="39" selection-end="39" vertical-scroll-proportion="0.04137931" vertical-offset="0" max-vertical-offset="725">
           <folding />
         </state>
       </provider>

@@ -1,0 +1,138 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+#ptotemy-game {
+    position: fixed;
+    width: 640px;
+    height: 480px;
+    
+}
+
+#log {
+    display: none;
+}
+
+#entities, #items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+/*    display: none;*/
+}
+
+img {
+    width: 100%;
+}
+
+.environment, .location, .entity, .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Specify the location, height and width of the elements */
+
+#base img {
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    width: 35%;
+    height: auto !important;
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    z-index: 1;
+}
+
+#message-box {
+    background: rgba(1, 1, 1, 0.8);
+    z-index: 1000;
+    display: none;
+}
+
+#message {
+    height: 13%;
+    width: 20%;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background: rgba(250, 250, 250, 0.8);
+    z-index: 1001;
+    text-align: center;
+    padding-top: 7%;
+}
+
+#ai img {
+    width: 25%;
+    position: absolute;
+    left: 2.5%;
+    top: 5%;
+}
+
+#player img {
+    width: 25%;
+    position: absolute;
+    bottom: 15%;
+    right: 1%;
+}
+
+#meterBar {
+    height: 5%;
+    left: 2%;
+    top: 39%;
+    width: 25%;
+    padding: 3px;
+
+    background: rgba(5, 5, 5, 0.7);
+    border-radius: 5px;
+}
+
+#indicator {
+    width: 100%;
+    /*height: 100%;*/
+    color: #666;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#indicator span {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 20%;
+}
+
+#filled {
+    /*position: absolute;*/
+    position: relative !important;
+    height: 100%;
+
+    border-radius: 5px;
+
+    background: rgb(129,237,128); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(129,237,128,1) 0%, rgba(60,214,40,1) 50%, rgba(31,198,37,1) 51%, rgba(30,153,30,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(129,237,128,1)), color-stop(50%,rgba(60,214,40,1)), color-stop(51%,rgba(31,198,37,1)), color-stop(100%,rgba(30,153,30,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(129,237,128,1) 0%,rgba(60,214,40,1) 50%,rgba(31,198,37,1) 51%,rgba(30,153,30,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(129,237,128,1) 0%,rgba(60,214,40,1) 50%,rgba(31,198,37,1) 51%,rgba(30,153,30,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(129,237,128,1) 0%,rgba(60,214,40,1) 50%,rgba(31,198,37,1) 51%,rgba(30,153,30,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(129,237,128,1) 0%,rgba(60,214,40,1) 50%,rgba(31,198,37,1) 51%,rgba(30,153,30,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81ed80', endColorstr='#1e991e',GradientType=0 ); /* IE6-9 */
+}
+
+#limit {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 0, 0, 1);
+    z-index: 1;
+}

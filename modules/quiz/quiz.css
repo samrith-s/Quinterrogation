@@ -1,0 +1,100 @@
+#quiz {
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.85em;
+    /*display: none;*/
+}
+
+#statement-area {
+    /*background-image: url("../../img/bubble_left.png");*/
+    /*background-size:cover;*/
+    /*background-repeat: no-repeat;*/
+
+    background: rgba(250, 250, 250, 0.8);
+    border-radius: 10px;
+    left:30%;
+    top:5%;
+    width: 62%;
+    padding:3%;
+    position: absolute;
+    text-align: justify;
+}
+
+#options-area {
+    /*background-image: url("../../img/bubble_right.png");*/
+    /*background-size:cover;*/
+    /*background-repeat: no-repeat;*/
+
+    background: rgba(250, 250, 250, 0.8);
+    border-radius: 10px;
+
+    left: 2%;
+    top: 52%;
+    width: 70%;
+    height: auto !important;
+    position: fixed;
+    padding: 2%;
+}
+
+.option-block {
+    /*position: absolute;*/
+    height: 94%;
+    width: 92%;
+    text-align: justify;
+
+    z-index: auto;
+    cursor: pointer;
+    margin-left: 4%;
+    margin-right: 4%;
+
+}
+
+#leftOpt {
+    z-index: 999;
+    width: 5%;
+    cursor: pointer;
+    position: relative;
+}
+
+#leftOpt:hover {
+    transform: translateX(-4px);
+}
+
+#rightOpt {
+    z-index: 999;
+    width: 5%;
+    cursor: pointer;
+    position:relative;
+}
+
+#leftOpt img, #rightOpt img { vertical-align: middle;}
+
+#rightOpt:hover {
+    transform: translateX(4px);
+}
+
+.option-show {
+    display: block !important;
+}
+
+.option-block:hover {
+    transform: scale(1.02);
+}
+
+#options-list {
+    width: 90%;
+    position: relative;
+    z-index: 999;
+}
+
+#leftOpt, #rightOpt, #options-list
+{
+    vertical-align: middle;
+    display: block !important;
+    float:left;
+    height: 100%;
+    /*position: fixed;*/
+}

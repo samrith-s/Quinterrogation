@@ -1,6 +1,7 @@
 
 var base        = new Environment("base");
 var meterBar    = new Environment("meterBar");
+var meterOverlay = new Environment("meterOverlay");
 
 var player      = new Entity("player");
 var ai          = new Entity("ai");
@@ -24,6 +25,8 @@ function initGame() {
 
     loadConfig(base);
     loadConfig(meterBar);
+    loadConfig(meterOverlay);
+
     initQuiz();
 
     loadConfig(player);
@@ -46,12 +49,13 @@ function initGame() {
     console.log(ai.hammer.is());
 
     ai.points.push(random);
-    $("#filled").css({width: ai.meter.is()+"%"});
+    $("#qt-meter-filled").css({width: ai.meter.is()+"%"});
     $("#limit").css({left: ai.meterlimit.is()+"%"});
     $("#base img").attr("id", "qt-base-img");
     $("#ai img").attr("id", "qt-ai-img");
     $("#player img").attr("id", "qt-player-img");
     $("#logo img").attr("id", "qt-game-logo");
+    $("#qt-meter-overlay").append("<img src='img/meter-right.png' id='qt-meter-overlay-img' />");
 
     flag = 0;
 
@@ -85,7 +89,7 @@ function processAnswer(data) {
         ai.meter.is(ai.meter.max);
     });
 
-    $("#filled").animate({
+    $("#qt-meter-filled").animate({
         width: ai.meter.is()+"%"
     }, 500);
     ai.points.push(points);
@@ -101,10 +105,14 @@ function processAnswer(data) {
 
 function endGame() {
     $("*").unbind('click');
-    if(ai.meter.is() > ai.meterlimit.is())
-        victory();
-    else
-        defeat();
+    $("#qt-meter-filled").fadeOut(250).delay(100).fadeIn(250).delay(100).fadeOut(250).delay(100).fadeIn(250);
+
+    setTimeout(function() {
+        if(ai.meter.is() > ai.meterlimit.is())
+            victory();
+        else
+            defeat();
+    }, 2500);
 }
 
 function victory() {
@@ -143,7 +151,7 @@ function changeOption(id, direction) {
                 optionIndex--;
             else
                 optionIndex = question.options.length - 1;
-            
+
             optionScroller(optionIndex);
             break;
             

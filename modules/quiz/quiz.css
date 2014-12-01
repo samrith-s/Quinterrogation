@@ -5,6 +5,8 @@
     height: 100%;
     overflow: hidden;
     font-size: 0.85em;
+    position: absolute;
+    z-index: 5;
     /*display: none;*/
 }
 
@@ -13,13 +15,18 @@
     /*background-size:cover;*/
     /*background-repeat: no-repeat;*/
 
-    background: rgba(250, 250, 250, 0.8);
-    border-radius: 5px;
-    left:30%;
-    top:5%;
-    width: 62%;
-    padding:3%;
-    position: absolute;
+    position: relative;
+    padding: 0px;
+
+    background: url('../../img/speech_bubble_1.png') no-repeat;
+    background-size: contain;
+    margin: 3%;
+    margin-right: 0;
+    height: 35% !important;
+    width: 25%;
+    padding:3% 3% 3% 3%;
+    display: inline-block;
+    float: left;
     text-align: justify;
 }
 
@@ -28,14 +35,27 @@
     /*background-size:cover;*/
     /*background-repeat: no-repeat;*/
 
-    background: rgba(250, 250, 250, 0.8);
-    border-radius: 5px;
+    background: url('../../img/speech_bubble_2.png') no-repeat;
+    background-size: contain;
+    width: 20%;
+    height: 35%;
+    margin: 3% 0 3% 3%;
+    float:left;
+    display: inline-block;
+    padding: 3%;
+    padding-right: 7%;
+}
 
-    left: 2%;
-    top: 52%;
-    width: 70%;
+#botOpt {
+    width: 56%;
+    /*float: right;*/
+    margin: 3%;
     position: absolute;
-    padding: 2%;
+    left: 31%;
+    top: 46%;
+    /*float: right;*/
+    text-align: center;
+    vertical-align: middle;
 }
 
 .option-block {
@@ -46,34 +66,26 @@
 
     z-index: auto;
     cursor: pointer;
-    margin-left: 4%;
-    margin-right: 4%;
+    /*margin-left: 4%;*/
+    /*margin-right: 4%;*/
 
 }
 
-#leftOpt {
+#leftOpt, #rightOpt {
     z-index: 999;
-    width: 5%;
+    width: 12%;
+    height: 100%;
     cursor: pointer;
+    padding: 1%;
+    border-radius: 5px;
+    float:left;
+    /*display: block;*/
     position: relative;
+
 }
 
-#leftOpt:hover {
-    transform: translateX(-4px);
-}
+#leftOpt, #rightOpt { vertical-align: middle;}
 
-#rightOpt {
-    z-index: 999;
-    width: 5%;
-    cursor: pointer;
-    position:relative;
-}
-
-#leftOpt img, #rightOpt img { vertical-align: middle;}
-
-#rightOpt:hover {
-    transform: translateX(4px);
-}
 
 .option-show {
     display: block !important;
@@ -85,36 +97,39 @@
     z-index: 999;
 }
 
-#leftOpt, #rightOpt, #options-list, #qt-say-button
-{
-    vertical-align: middle;
-    display: block !important;
+#qt-say-button {
+    border-radius: 5px;
     float:left;
-    height: 100%;
-    /*position: fixed;*/
+    width: 30%;
+    z-index: 2;
+    margin-top: 3%;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
 }
 
-#qt-say-button {
-    padding: 3%;
-    margin: 2%;
-    margin-top: 5%;
-    margin-bottom: 0;
-    font-weight: bold;
+#qt-know-more {
     border-radius: 5px;
-    border: 0;
-    color: rgba(1,1,1,1);
-
-    background: rgb(135,224,253); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(135,224,253,1) 0%, rgba(83,203,241,1) 40%, rgba(5,171,224,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(135,224,253,1)), color-stop(40%,rgba(83,203,241,1)), color-stop(100%,rgba(5,171,224,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
-
-    width: 90%;
+    float: right;
+    width: 30%;
     z-index: 2;
     position: relative;
     cursor: pointer;
+    margin-top: 3%;
+    margin-right: -7%;
+}
+
+#qt-meter-overlay {
+    width: 71% !important;
+    height: 21%;
+    position: relative;
+    top: 72%;
+    left:27%;
+    vertical-align: middle;
+}
+
+#qt-meter-overlay-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }

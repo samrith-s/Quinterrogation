@@ -6,16 +6,20 @@ config.quiz = {
         {name: "default", representation: "<div id='statement-area'></div>" +
          "" +
             "<div id='options-area'>" +
-                "<div id='leftOpt'>" +
-                    "<img src='img/arrow-left.png' />" +
-                "</div>" +
-                "<div id='options-list'></div>" +
-                "<div id='rightOpt'>" +
-                    "<img src='img/arrow-right.png' />" +
-                "</div>" +
-                "<span id='qt-say-button'>" +
-                    "Say this!" +
-                "</span>" +
+            "</div>" +
+
+            "<div id='botOpt'>" +
+//                "<div id='leftOpt'>" +
+                   "<img id='leftOpt' src='img/leftOpt.png' />" +
+//                "</div>" +
+
+                "<img src='img/say_button.png' id='qt-say-button' />" +
+
+//                "<div id='rightOpt'>" +
+                    "<img id='rightOpt' src='img/rightOpt.png' />" +
+//                "</div>" +
+                "<img id='qt-know-more' src='img/know_more.png' />" +
+
             "</div>"
         }
     ]
@@ -96,7 +100,7 @@ Question.showQuizPanel = function (obj, question) {
     $('#statement-area').html(question.name);
     $('.option-block').remove();
     for (var i in question.options) {
-        $('#options-list').append('<div class="option-block" id="option-block-' + i + '">' + question.options[i].name + '</div>');
+        $('#options-area').append('<div class="option-block" id="option-block-' + i + '">' + question.options[i].name + '</div>');
     }
     $('.option-block').unbind('click').on('click', function () {
         $this = $(this);

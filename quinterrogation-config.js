@@ -7,8 +7,19 @@ config.base = {
     ],
     locations: [
         {name: "logo", states: [
-            {name: "indicator-img", representation: "<img src='img/game_logo.png' />"}
+            {name: "logo", representation: "<img src='img/game_logo.png' />"}
         ]},
+        {name: "message-box", states: [
+            {name: "message", representation: "<div id='message'></div>"}
+        ]},
+    ]
+}
+
+config.msg = {
+    type: "environment",
+    states: [
+    ],
+    locations: [
         {name: "message-box", states: [
             {name: "message", representation: "<div id='message'></div>"}
         ]}
@@ -21,24 +32,36 @@ config.meterBar = {
         {name: "default", representation: ""}
     ],
     locations: [
+        {name: "qt-meter-empty"},
         {name: "limit"},
-        {name: "filled"},
-        {name: "indicator", states: [
-            {name: "indicator-text", representation: "<span>mood</span>"}
+        {name: "qt-meter-filled"},
+        {name: "qt-meter-indicator", states: [
+            {name: "qt-meter-indicator-text", representation: "<span>mood</span>"}
         ]}
     ]
 };
 
+
+config.meterOverlay = {
+    type: "environment",
+    states: [
+        {name: "default"}
+    ],
+    locations: [
+        {name: "qt-meter-overlay"}
+    ]
+}
+
 config.player = {
     type: "entity",
     states: [
-        {name: "default", representation: "<img src='./img/player.png' />"}
+        {name: "default", representation: "<img id='qt-player-img' src='./img/player.png' />"}
     ]
 };
 
 config.ai = {
     type: "entity",
     states: [
-        {name: "default", representation: "<img src='./img/ai.png' />"}
+        {name: "default", representation: "<img id='qt-ai-img' src='./img/ai.png' />"}
     ]
 };

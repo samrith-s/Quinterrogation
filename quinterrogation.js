@@ -2,6 +2,7 @@
 var base        = new Environment("base");
 var meterBar    = new Environment("meterBar");
 var meterOverlay = new Environment("meterOverlay");
+var msg         = new Entity("msg");
 
 var player      = new Entity("player");
 var ai          = new Entity("ai");
@@ -17,9 +18,11 @@ var flag;
 
 $(function() {
     initGame();
-    playGame();
     observers();
+    playGame();
+    window.ondragstart = function() { return false; }
 });
+
 
 function initGame() {
 
@@ -55,7 +58,6 @@ function initGame() {
     $("#ai img").attr("id", "qt-ai-img");
     $("#player img").attr("id", "qt-player-img");
     $("#logo img").attr("id", "qt-game-logo");
-    $("#qt-meter-overlay").append("<img src='img/meter-right.png' id='qt-meter-overlay-img' />");
 
     flag = 0;
 
@@ -63,6 +65,7 @@ function initGame() {
 
 function playGame() {
     question = getQuestion();
+
 
     $('#quiz').fadeOut(function () {
         Question.showQuizPanel(quiz, question);
@@ -108,6 +111,8 @@ function endGame() {
     $("#qt-meter-filled").fadeOut(250).delay(100).fadeIn(250).delay(100).fadeOut(250).delay(100).fadeIn(250);
 
     setTimeout(function() {
+//        $("#player").css({opacity: 0.9});
+//        $("#ai").css({opacity: 0.9});
         if(ai.meter.is() > ai.meterlimit.is())
             victory();
         else

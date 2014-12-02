@@ -3,9 +3,16 @@ var quiz;
 config.quiz = {
     type: "environment",
     states: [
-        {name: "default", representation: "<div id='statement-area'></div>" +
+        {name: "default", representation:
+            "<div id='statement-area'>" +
+                "<img src='img/speech_bubble_1.png' id='qt-speech-bubble-1' />" +
+                "<div id='statement-text'>" +
+                "</div>" +
+            "</div>" +
          "" +
             "<div id='options-area'>" +
+                "<img src='img/speech_bubble_2.png' id='qt-speech-bubble-2' />" +
+
             "</div>" +
 
             "<div id='botOpt'>" +
@@ -18,9 +25,9 @@ config.quiz = {
 //                "<div id='rightOpt'>" +
                     "<img id='rightOpt' src='img/rightOpt.png' />" +
 //                "</div>" +
-                "<img id='qt-know-more' src='img/know_more.png' />" +
+            "</div>" +
 
-            "</div>"
+            "<img id='qt-know-more' src='img/know_more.png' />"
         }
     ]
 };
@@ -97,7 +104,7 @@ Question.getQuestion = function(weight, flag) {
 }
 
 Question.showQuizPanel = function (obj, question) {
-    $('#statement-area').html(question.name);
+    $('#statement-text').html(question.name);
     $('.option-block').remove();
     for (var i in question.options) {
         $('#options-area').append('<div class="option-block" id="option-block-' + i + '">' + question.options[i].name + '</div>');

@@ -6,26 +6,11 @@ config.base = {
         {name: "default", representation: "<img src='img/background.jpg'/>"}
     ],
     locations: [
-        {name: "logo", states: [
-            {name: "logo", representation: "<img src='img/game_logo.png' />"}
-        ]},
-        {name: "message-box", states: [
-            {name: "message", representation: "<div id='message'></div>"}
-        ]},
-    ]
-}
-
-config.msg = {
-    type: "environment",
-    states: [
-    ],
-    locations: [
-        {name: "message-box", states: [
-            {name: "message", representation: "<div id='message'></div>"}
+        {name: "qt-bot-overlay", states: [
+            {name: "qt-bot-overlay-img", representation: "<img class='qt-bot-overlay-img' src='img/bot_overlay.png' />"}
         ]}
     ]
 }
-
 config.meterBar = {
     type: "environment",
     states: [

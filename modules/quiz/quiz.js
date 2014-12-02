@@ -5,29 +5,29 @@ config.quiz = {
     states: [
         {name: "default", representation:
             "<div id='statement-area'>" +
-                "<img src='img/speech_bubble_1.png' id='qt-speech-bubble-1' />" +
+                "<img src='' id='qt-speech-bubble-1' />" +
                 "<div id='statement-text'>" +
                 "</div>" +
             "</div>" +
          "" +
             "<div id='options-area'>" +
-                "<img src='img/speech_bubble_2.png' id='qt-speech-bubble-2' />" +
+                "<img src='' id='qt-speech-bubble-2' />" +
 
             "</div>" +
 
             "<div id='botOpt'>" +
 //                "<div id='leftOpt'>" +
-                   "<img id='leftOpt' src='img/leftOpt.png' />" +
+                   "<img id='leftOpt' src='' />" +
 //                "</div>" +
 
-                "<img src='img/say_button.png' id='qt-say-button' />" +
+                "<img src='' id='qt-say-button' />" +
 
 //                "<div id='rightOpt'>" +
-                    "<img id='rightOpt' src='img/rightOpt.png' />" +
+                    "<img id='rightOpt' src='' />" +
 //                "</div>" +
             "</div>" +
 
-            "<img id='qt-know-more' src='img/know_more.png' />"
+            "<img id='qt-know-more' src='' />"
         }
     ]
 };
@@ -41,49 +41,46 @@ function initQuiz() {
 
 
 function loadQuestionBank() {
-    for (var i in   questionbank.questions) {
+    for (var i in questionbank.questions) {
         var q = questionbank.questions[i];
         var opts = ["a", "b", "c", "d"];
         var optsz = ["", "correct", "points"];
         var options = [];
         var optiones = {};
         for(var i=0; i<opts.length; i++) {
-                var temp1 = "opt" + opts[i] + optsz[0];
-                var temp2 = "opt" + opts[i] + optsz[1];
-                var temp3 = "opt" + opts[i] + optsz[2];
-
-                optiones.option = i+1;
-                optiones.name = q[temp1];
-                optiones.correct = q[temp2];
-                optiones.points = q[temp3];
-
-                options.push(optiones);
-                optiones = {};
+            var temp1 = "opt" + opts[i] + optsz[0];
+            var temp2 = "opt" + opts[i] + optsz[1];
+            var temp3 = "opt" + opts[i] + optsz[2];
+            optiones.option = i+1;
+            optiones.name = q[temp1];
+            optiones.correct = q[temp2];
+            optiones.points = q[temp3];
+            options.push(optiones);
+            optiones = {}
         }
-
-        new Question(q.statement, q.image, q.weight, options, q.help);
+        new Question(q.statement, q.image, q.weight, options, q.help, q.slide_id, q.id);
     }
-    console.log(Question.all[0]);
     return true;
 }
 
 
 var Question = Class({
-    initialize: function (name, image, weight, options, help) {
-
+    initialize: function (name, image, weight, options, help, slide_id, id) {
         this.name = name;
         this.image = image;
         this.weight = weight || 1;
         this.options = options;
         this.help = help;
+        this.slide_id = slide_id;
+        this.id  = id;
         Question.all.push(this);
         log.add('Question: ' + name + ' created')
     },
-    checkAnswer: function (option) {
+    checkAnswer: function ($this, option) {
         var thisAnswer = $.grep(this.options, function (a) {
             return ( a == option );
         })[0];
-        return {name: thisAnswer.name, correct: thisAnswer.correct, weight: this.weight, points: thisAnswer.points, help: this.help}
+        return {$this: $this, correct: thisAnswer.correct, weight: this.weight, points: thisAnswer.points, help: this.help}
     }
 });
 
@@ -111,7 +108,15 @@ Question.showQuizPanel = function (obj, question) {
     }
     $('.option-block').unbind('click').on('click', function () {
         $this = $(this);
-        $(question).trigger("answered", [question.checkAnswer(question.options[parseInt($this.attr("id").split("option-block-")[1])])]);
+        $(question).trigger("answered", [question.checkAnswer($(this), question.options[parseInt($this.attr("id").split("option-block-")[1])], $this.attr("id"))]);
+    });
+
+    $("#qt-know-more").attr("template-id", question.slide_id);
+    $("#qt-know-more").unbind('click').on('click', function(e) {
+        templateId = $(e.currentTarget).attr("template-id");
+        console.log(templateId);
+        parent.learnModal(templateId);
+        parent.recordKmClick();
     });
 };
 

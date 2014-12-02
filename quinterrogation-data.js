@@ -1,20 +1,5 @@
-function getImg(str){
-    if(parent.getImageInGame(parent.currentIntegratedGame,str) === 403)
-        return defaultImages.path+defaultImages[str]
-    else
-        return parent.getImageInGame(parent.currentIntegratedGame,str)
-}
-
 window.user = {};
 user.credits = 205;
-//this is the object which contains path for default text and images
-defaultImages  ={}
-defaultImages.path = "img/quinterrogation/";
-defaultImages.game_logo = "game_logo.png";
-defaultImages["qt-base-img"] = "background.jpg";
-defaultImages["qt-player-img"] = "player.png";
-defaultImages["qt-ai-img"] = "ai.png";
-
 
 game = {};
 

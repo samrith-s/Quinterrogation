@@ -17,26 +17,57 @@ var question;
 var flag;
 
 $(function() {
-    initGame();
+    initTheme();
+//    initGame();
     observers();
     playGame();
     window.ondragstart = function() { return false; }
+
+    parent.setGameAttempt(parent.currentIntegratedGame, parent.currentUid);
 });
+
+function initTheme() {
+
+        loadConfig(base);
+        loadConfig(meterBar);
+        loadConfig(meterOverlay);
+
+        initQuiz();
+
+        loadConfig(player);
+        player.setState('1');
+
+        loadConfig(ai);
+        ai.setState('1');
+
+        $("#base img").attr("id", "qt-base-img");
+        $("#ai img").attr("id", "qt-ai-img");
+        $("#player img").attr("id", "qt-player-img");
+        $("#logo img").attr("id", "qt-game-logo");
+
+        $("#qt-base-img").attr("src", getImg("qt-background"));
+        $("#qt-player-img").attr("src", getImg("qt-player"));
+        $("#qt-ai-img").attr("src", getImg("qt-ai"));
+        $(".qt-bot-overlay-img").attr("src", getImg("qt-bot-overlay"));
+        $("#qt-meter-empty").css({background: "url('" + getImg("qt-meter-bar-bg") + "')"});
+        $("#qt-meter-filled").css({background: "url('" + getImg("qt-meter-bar-filled") + "')"});
+        $("#qt-meter-indicator span").text(getText("qt-meter-text"));
+        $("#leftOpt").attr("src", getImg("qt-left-opt-arrow"));
+        $("#rightOpt").attr("src", getImg("qt-right-opt-arrow"));
+        $("#qt-say-button").attr("src", getImg("qt-say-this"));
+        $("#qt-know-more").attr("src", getImg("qt-know-more"));
+        $("#qt-speech-bubble-2").attr("src", getImg("qt-options-back"));
+        $("#qt-speech-bubble-1").attr("src", getImg("qt-statement-back"));
+
+        initGame();
+
+        $("#qt-meter-filled").css({width: ai.meter.is()+"%"});
+        $("#limit").css({left: ai.meterlimit.is()+"%"});
+
+}
 
 
 function initGame() {
-
-    loadConfig(base);
-    loadConfig(meterBar);
-    loadConfig(meterOverlay);
-
-    initQuiz();
-
-    loadConfig(player);
-    player.setState('1');
-
-    loadConfig(ai);
-    ai.setState('1');
 
     var random  = randBetween(0, game.ai.length-1);
     ai.createWallet(brain, 0, 10, game.ai[random].brain);
@@ -52,12 +83,7 @@ function initGame() {
     console.log(ai.hammer.is());
 
     ai.points.push(random);
-    $("#qt-meter-filled").css({width: ai.meter.is()+"%"});
-    $("#limit").css({left: ai.meterlimit.is()+"%"});
-    $("#base img").attr("id", "qt-base-img");
-    $("#ai img").attr("id", "qt-ai-img");
-    $("#player img").attr("id", "qt-player-img");
-    $("#logo img").attr("id", "qt-game-logo");
+
 
     flag = 0;
 
@@ -76,10 +102,13 @@ function playGame() {
 
 function getQuestion() {
     var question = Question.getQuestion(1, flag);
+    parent.setQuestionAttempt(Question.id);
     return question;
 }
 
 function processAnswer(data) {
+    parent.markQuestionAttemptCorrect();
+
     var points = data.points;
     var brain = parseInt(points[0]);
     var heart = parseInt(points[1]);
